@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AE7E29D482F67EA2B80C7A5 /* Pods_ZoeyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23D22FB0F395C95A28BDF9B /* Pods_ZoeyAppTests.framework */; };
+		C748B96643ED8FE4A296DBDD /* Pods_ZoeyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8158A83BB4161A1ABA6BAAC /* Pods_ZoeyApp.framework */; };
 		EBE0E0191E41F4E200773AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0181E41F4E200773AD3 /* AppDelegate.swift */; };
-		EBE0E01B1E41F4E200773AD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E01A1E41F4E200773AD3 /* ViewController.swift */; };
+		EBE0E01B1E41F4E200773AD3 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E01A1E41F4E200773AD3 /* DevicesVC.swift */; };
 		EBE0E01E1E41F4E200773AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E01C1E41F4E200773AD3 /* Main.storyboard */; };
 		EBE0E0201E41F4E200773AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E01F1E41F4E200773AD3 /* Assets.xcassets */; };
 		EBE0E0231E41F4E200773AD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E0211E41F4E200773AD3 /* LaunchScreen.storyboard */; };
 		EBE0E02E1E41F4E200773AD3 /* ZoeyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */; };
+		EBE0E03C1E41F5B300773AD3 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E03B1E41F5B300773AD3 /* DetailVC.swift */; };
+		EBE0E0401E41F6D100773AD3 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E03F1E41F6D100773AD3 /* DeviceCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +30,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1551569FF63B5987CF048494 /* Pods-ZoeyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoeyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZoeyApp/Pods-ZoeyApp.release.xcconfig"; sourceTree = "<group>"; };
+		549B126207907A58A56D6654 /* Pods-ZoeyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoeyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoeyAppTests/Pods-ZoeyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8BEECF89A1A8FB94F6DFE659 /* Pods-ZoeyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoeyAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZoeyAppTests/Pods-ZoeyAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E0A9D7457F001B62CF5A1C6 /* Pods-ZoeyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoeyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoeyApp/Pods-ZoeyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C8158A83BB4161A1ABA6BAAC /* Pods_ZoeyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoeyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23D22FB0F395C95A28BDF9B /* Pods_ZoeyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoeyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE0E0151E41F4E200773AD3 /* ZoeyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoeyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE0E0181E41F4E200773AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBE0E01A1E41F4E200773AD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBE0E01A1E41F4E200773AD3 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
 		EBE0E01D1E41F4E200773AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBE0E01F1E41F4E200773AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBE0E0221E41F4E200773AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +46,8 @@
 		EBE0E0291E41F4E200773AD3 /* ZoeyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoeyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoeyAppTests.swift; sourceTree = "<group>"; };
 		EBE0E02F1E41F4E200773AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE0E03B1E41F5B300773AD3 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		EBE0E03F1E41F6D100773AD3 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C748B96643ED8FE4A296DBDD /* Pods_ZoeyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE7E29D482F67EA2B80C7A5 /* Pods_ZoeyAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BB132FEF57F90B898C0A847 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E0A9D7457F001B62CF5A1C6 /* Pods-ZoeyApp.debug.xcconfig */,
+				1551569FF63B5987CF048494 /* Pods-ZoeyApp.release.xcconfig */,
+				549B126207907A58A56D6654 /* Pods-ZoeyAppTests.debug.xcconfig */,
+				8BEECF89A1A8FB94F6DFE659 /* Pods-ZoeyAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3108BB0EFECF79982C8CFE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8158A83BB4161A1ABA6BAAC /* Pods_ZoeyApp.framework */,
+				E23D22FB0F395C95A28BDF9B /* Pods_ZoeyAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EBE0E00C1E41F4E200773AD3 = {
 			isa = PBXGroup;
 			children = (
 				EBE0E0171E41F4E200773AD3 /* ZoeyApp */,
 				EBE0E02C1E41F4E200773AD3 /* ZoeyAppTests */,
 				EBE0E0161E41F4E200773AD3 /* Products */,
+				7BB132FEF57F90B898C0A847 /* Pods */,
+				E3108BB0EFECF79982C8CFE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +113,10 @@
 		EBE0E0171E41F4E200773AD3 /* ZoeyApp */ = {
 			isa = PBXGroup;
 			children = (
+				EBE0E03A1E41F58A00773AD3 /* Controller */,
+				EBE0E0391E41F58300773AD3 /* View */,
+				EBE0E0381E41F57D00773AD3 /* Model */,
 				EBE0E0181E41F4E200773AD3 /* AppDelegate.swift */,
-				EBE0E01A1E41F4E200773AD3 /* ViewController.swift */,
 				EBE0E01C1E41F4E200773AD3 /* Main.storyboard */,
 				EBE0E01F1E41F4E200773AD3 /* Assets.xcassets */,
 				EBE0E0211E41F4E200773AD3 /* LaunchScreen.storyboard */,
@@ -96,6 +134,30 @@
 			path = ZoeyAppTests;
 			sourceTree = "<group>";
 		};
+		EBE0E0381E41F57D00773AD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EBE0E0391E41F58300773AD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0E03F1E41F6D100773AD3 /* DeviceCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EBE0E03A1E41F58A00773AD3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0E01A1E41F4E200773AD3 /* DevicesVC.swift */,
+				EBE0E03B1E41F5B300773AD3 /* DetailVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBE0E0321E41F4E200773AD3 /* Build configuration list for PBXNativeTarget "ZoeyApp" */;
 			buildPhases = (
+				A2611CD6F0D603B8E5E79B95 /* [CP] Check Pods Manifest.lock */,
 				EBE0E0111E41F4E200773AD3 /* Sources */,
 				EBE0E0121E41F4E200773AD3 /* Frameworks */,
 				EBE0E0131E41F4E200773AD3 /* Resources */,
+				197D152F593BA89FD0D70A64 /* [CP] Embed Pods Frameworks */,
+				F39AF2733BF82315F203D9E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBE0E0351E41F4E200773AD3 /* Build configuration list for PBXNativeTarget "ZoeyAppTests" */;
 			buildPhases = (
+				EA878353677BBB126ADD839B /* [CP] Check Pods Manifest.lock */,
 				EBE0E0251E41F4E200773AD3 /* Sources */,
 				EBE0E0261E41F4E200773AD3 /* Frameworks */,
 				EBE0E0271E41F4E200773AD3 /* Resources */,
+				30D8E403D4C30465A4E1F8CB /* [CP] Embed Pods Frameworks */,
+				27A8F146831F884E816D6AD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,13 +264,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		197D152F593BA89FD0D70A64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZoeyApp/Pods-ZoeyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27A8F146831F884E816D6AD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZoeyAppTests/Pods-ZoeyAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30D8E403D4C30465A4E1F8CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZoeyAppTests/Pods-ZoeyAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2611CD6F0D603B8E5E79B95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA878353677BBB126ADD839B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F39AF2733BF82315F203D9E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZoeyApp/Pods-ZoeyApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBE0E0111E41F4E200773AD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE0E01B1E41F4E200773AD3 /* ViewController.swift in Sources */,
+				EBE0E01B1E41F4E200773AD3 /* DevicesVC.swift in Sources */,
 				EBE0E0191E41F4E200773AD3 /* AppDelegate.swift in Sources */,
+				EBE0E03C1E41F5B300773AD3 /* DetailVC.swift in Sources */,
+				EBE0E0401E41F6D100773AD3 /* DeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +500,7 @@
 		};
 		EBE0E0331E41F4E200773AD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E0A9D7457F001B62CF5A1C6 /* Pods-ZoeyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MXE9N2LLEZ;
@@ -350,6 +514,7 @@
 		};
 		EBE0E0341E41F4E200773AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1551569FF63B5987CF048494 /* Pods-ZoeyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MXE9N2LLEZ;
@@ -363,6 +528,7 @@
 		};
 		EBE0E0361E41F4E200773AD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 549B126207907A58A56D6654 /* Pods-ZoeyAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -378,6 +544,7 @@
 		};
 		EBE0E0371E41F4E200773AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BEECF89A1A8FB94F6DFE659 /* Pods-ZoeyAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +577,7 @@
 				EBE0E0341E41F4E200773AD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBE0E0351E41F4E200773AD3 /* Build configuration list for PBXNativeTarget "ZoeyAppTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +586,7 @@
 				EBE0E0371E41F4E200773AD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

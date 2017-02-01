@@ -1,0 +1,18 @@
+PODS:
+  - Bolts/Tasks (1.8.4)
+  - FastCoding+tvOS (3.2.1)
+  - MetaWear (2.8.2):
+    - Bolts/Tasks (~> 1.8.4)
+    - FastCoding+tvOS (~> 3.2.1)
+
+DEPENDENCIES:
+  - MetaWear
+
+SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FastCoding+tvOS: d314b6daa8389ec790ab362f973f53a5657292bd
+  MetaWear: 5b7520e23ccc34fd2af019eb7678ca2118aa488d
+
+PODFILE CHECKSUM: c417c6ff744259b0ff4a5334ef12a44dd9419423
+
+COCOAPODS: 1.1.1

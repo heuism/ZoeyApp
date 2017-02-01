@@ -1,0 +1,6 @@
+framework module Pods_ZoeyApp {
+  umbrella header "Pods-ZoeyApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
