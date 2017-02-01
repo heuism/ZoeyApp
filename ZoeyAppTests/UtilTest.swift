@@ -1,15 +1,14 @@
 //
-//  ZoeyAppTests.swift
-//  ZoeyAppTests
+//  UtilTest.swift
+//  ZoeyApp
 //
 //  Created by Hien Tran on 1/2/17.
 //  Copyright © 2017 Hien Tran. All rights reserved.
 //
 
 import XCTest
-@testable import ZoeyApp
 
-class ZoeyAppTests: XCTestCase {
+class UtilTest: XCTestCase {
     
     override func setUp() {
         super.setUp()

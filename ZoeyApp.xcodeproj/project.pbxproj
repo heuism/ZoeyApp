@@ -14,11 +14,16 @@
 		EBE0E01E1E41F4E200773AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E01C1E41F4E200773AD3 /* Main.storyboard */; };
 		EBE0E0201E41F4E200773AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E01F1E41F4E200773AD3 /* Assets.xcassets */; };
 		EBE0E0231E41F4E200773AD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E0211E41F4E200773AD3 /* LaunchScreen.storyboard */; };
-		EBE0E02E1E41F4E200773AD3 /* ZoeyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */; };
 		EBE0E03C1E41F5B300773AD3 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E03B1E41F5B300773AD3 /* DetailVC.swift */; };
 		EBE0E0401E41F6D100773AD3 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E03F1E41F6D100773AD3 /* DeviceCell.swift */; };
 		EBE0E0471E41FFDF00773AD3 /* AccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0451E41FFDF00773AD3 /* AccelerometerFilter.m */; };
 		EBE0E0481E41FFDF00773AD3 /* APLGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0461E41FFDF00773AD3 /* APLGraphView.m */; };
+		EBE0E0601E4208BD00773AD3 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E05F1E4208BD00773AD3 /* Util.swift */; };
+		EBE0E0761E420ABE00773AD3 /* AIToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0E0751E420ABE00773AD3 /* AIToolbox.framework */; };
+		EBE0E0771E420ABE00773AD3 /* AIToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0E0751E420ABE00773AD3 /* AIToolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EBE0E0811E420B1100773AD3 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0E07E1E420B0900773AD3 /* Surge.framework */; };
+		EBE0E0821E420B1100773AD3 /* Surge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0E07E1E420B0900773AD3 /* Surge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EBE0E0861E420B6500773AD3 /* UtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0851E420B6500773AD3 /* UtilTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +34,78 @@
 			remoteGlobalIDString = EBE0E0141E41F4E200773AD3;
 			remoteInfo = ZoeyApp;
 		};
+		EBE0E0691E420A1A00773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E0611E420A1900773AD3 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EBA29AB1A91350C0012CEC9;
+			remoteInfo = AIToolbox;
+		};
+		EBE0E06B1E420A1A00773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E0611E420A1900773AD3 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EBA29B61A91350C0012CEC9;
+			remoteInfo = AIToolboxTests;
+		};
+		EBE0E06D1E420A1A00773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E0611E420A1900773AD3 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0E0A4F931C133E8800AD5AAE;
+			remoteInfo = AIToolboxIOS;
+		};
+		EBE0E06F1E420A1A00773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E0611E420A1900773AD3 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0E0A4F9C1C133E8800AD5AAE;
+			remoteInfo = AIToolboxIOSTests;
+		};
+		EBE0E0711E420A1A00773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E0611E420A1900773AD3 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB0D5A231CAF09230097590B;
+			remoteInfo = "AIToolbox copy";
+		};
+		EBE0E07D1E420B0900773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8A1E1AA19917A79009735E2;
+			remoteInfo = Surge;
+		};
+		EBE0E07F1E420B0900773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F84A6AAE19A9A72F007B53E1;
+			remoteInfo = SurgeTests;
+		};
+		EBE0E0831E420B1100773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8A1E1A919917A79009735E2;
+			remoteInfo = Surge;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBE0E05E1E4208A100773AD3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EBE0E0771E420ABE00773AD3 /* AIToolbox.framework in Embed Frameworks */,
+				EBE0E0821E420B1100773AD3 /* Surge.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1551569FF63B5987CF048494 /* Pods-ZoeyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoeyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZoeyApp/Pods-ZoeyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +122,6 @@
 		EBE0E0221E41F4E200773AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBE0E0241E41F4E200773AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE0E0291E41F4E200773AD3 /* ZoeyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoeyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoeyAppTests.swift; sourceTree = "<group>"; };
 		EBE0E02F1E41F4E200773AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE0E03B1E41F5B300773AD3 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		EBE0E03F1E41F6D100773AD3 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
@@ -55,6 +130,11 @@
 		EBE0E0441E41FFDF00773AD3 /* AccelerometerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerFilter.h; sourceTree = SOURCE_ROOT; };
 		EBE0E0451E41FFDF00773AD3 /* AccelerometerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerFilter.m; sourceTree = SOURCE_ROOT; };
 		EBE0E0461E41FFDF00773AD3 /* APLGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLGraphView.m; sourceTree = SOURCE_ROOT; };
+		EBE0E05F1E4208BD00773AD3 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		EBE0E0611E420A1900773AD3 /* AIToolbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIToolbox.xcodeproj; path = "../../Master of IT-Melbourne Uni/Curve Tomorrow Studentship/AIToolbox/AIToolbox.xcodeproj"; sourceTree = "<group>"; };
+		EBE0E0751E420ABE00773AD3 /* AIToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIToolbox.framework; sourceTree = "<group>"; };
+		EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = "../../Master of IT-Melbourne Uni/Curve Tomorrow Studentship/Surge/Surge.xcodeproj"; sourceTree = "<group>"; };
+		EBE0E0851E420B6500773AD3 /* UtilTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE0E0811E420B1100773AD3 /* Surge.framework in Frameworks */,
+				EBE0E0761E420ABE00773AD3 /* AIToolbox.framework in Frameworks */,
 				C748B96643ED8FE4A296DBDD /* Pods_ZoeyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +182,9 @@
 		EBE0E00C1E41F4E200773AD3 = {
 			isa = PBXGroup;
 			children = (
+				EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */,
+				EBE0E0751E420ABE00773AD3 /* AIToolbox.framework */,
+				EBE0E0611E420A1900773AD3 /* AIToolbox.xcodeproj */,
 				EBE0E0171E41F4E200773AD3 /* ZoeyApp */,
 				EBE0E02C1E41F4E200773AD3 /* ZoeyAppTests */,
 				EBE0E0161E41F4E200773AD3 /* Products */,
@@ -136,8 +221,8 @@
 		EBE0E02C1E41F4E200773AD3 /* ZoeyAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */,
 				EBE0E02F1E41F4E200773AD3 /* Info.plist */,
+				EBE0E0851E420B6500773AD3 /* UtilTest.swift */,
 			);
 			path = ZoeyAppTests;
 			sourceTree = "<group>";
@@ -145,6 +230,7 @@
 		EBE0E0381E41F57D00773AD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBE0E05F1E4208BD00773AD3 /* Util.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -178,6 +264,27 @@
 			name = Accelerometer;
 			sourceTree = "<group>";
 		};
+		EBE0E0621E420A1900773AD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0E06A1E420A1A00773AD3 /* AIToolbox.framework */,
+				EBE0E06C1E420A1A00773AD3 /* AIToolboxTests.xctest */,
+				EBE0E06E1E420A1A00773AD3 /* AIToolbox.framework */,
+				EBE0E0701E420A1A00773AD3 /* AIToolboxIOSTests.xctest */,
+				EBE0E0721E420A1A00773AD3 /* AIToolbox copy.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBE0E0791E420B0800773AD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0E07E1E420B0900773AD3 /* Surge.framework */,
+				EBE0E0801E420B0900773AD3 /* SurgeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,10 +298,12 @@
 				EBE0E0131E41F4E200773AD3 /* Resources */,
 				197D152F593BA89FD0D70A64 /* [CP] Embed Pods Frameworks */,
 				F39AF2733BF82315F203D9E3 /* [CP] Copy Pods Resources */,
+				EBE0E05E1E4208A100773AD3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBE0E0841E420B1100773AD3 /* PBXTargetDependency */,
 			);
 			name = ZoeyApp;
 			productName = ZoeyApp;
@@ -257,6 +366,16 @@
 			mainGroup = EBE0E00C1E41F4E200773AD3;
 			productRefGroup = EBE0E0161E41F4E200773AD3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EBE0E0621E420A1900773AD3 /* Products */;
+					ProjectRef = EBE0E0611E420A1900773AD3 /* AIToolbox.xcodeproj */;
+				},
+				{
+					ProductGroup = EBE0E0791E420B0800773AD3 /* Products */;
+					ProjectRef = EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EBE0E0141E41F4E200773AD3 /* ZoeyApp */,
@@ -264,6 +383,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EBE0E06A1E420A1A00773AD3 /* AIToolbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AIToolbox.framework;
+			remoteRef = EBE0E0691E420A1A00773AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBE0E06C1E420A1A00773AD3 /* AIToolboxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AIToolboxTests.xctest;
+			remoteRef = EBE0E06B1E420A1A00773AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBE0E06E1E420A1A00773AD3 /* AIToolbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AIToolbox.framework;
+			remoteRef = EBE0E06D1E420A1A00773AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBE0E0701E420A1A00773AD3 /* AIToolboxIOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AIToolboxIOSTests.xctest;
+			remoteRef = EBE0E06F1E420A1A00773AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBE0E0721E420A1A00773AD3 /* AIToolbox copy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "AIToolbox copy.framework";
+			remoteRef = EBE0E0711E420A1A00773AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBE0E07E1E420B0900773AD3 /* Surge.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Surge.framework;
+			remoteRef = EBE0E07D1E420B0900773AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBE0E0801E420B0900773AD3 /* SurgeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SurgeTests.xctest;
+			remoteRef = EBE0E07F1E420B0900773AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EBE0E0131E41F4E200773AD3 /* Resources */ = {
@@ -387,6 +558,7 @@
 				EBE0E0191E41F4E200773AD3 /* AppDelegate.swift in Sources */,
 				EBE0E03C1E41F5B300773AD3 /* DetailVC.swift in Sources */,
 				EBE0E0401E41F6D100773AD3 /* DeviceCell.swift in Sources */,
+				EBE0E0601E4208BD00773AD3 /* Util.swift in Sources */,
 				EBE0E0471E41FFDF00773AD3 /* AccelerometerFilter.m in Sources */,
 				EBE0E0481E41FFDF00773AD3 /* APLGraphView.m in Sources */,
 			);
@@ -396,7 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE0E02E1E41F4E200773AD3 /* ZoeyAppTests.swift in Sources */,
+				EBE0E0861E420B6500773AD3 /* UtilTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +579,11 @@
 			isa = PBXTargetDependency;
 			target = EBE0E0141E41F4E200773AD3 /* ZoeyApp */;
 			targetProxy = EBE0E02A1E41F4E200773AD3 /* PBXContainerItemProxy */;
+		};
+		EBE0E0841E420B1100773AD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Surge;
+			targetProxy = EBE0E0831E420B1100773AD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -525,9 +702,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E0A9D7457F001B62CF5A1C6 /* Pods-ZoeyApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MXE9N2LLEZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ZoeyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.curve.zoey.hientran.ZoeyApp;
@@ -542,9 +724,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1551569FF63B5987CF048494 /* Pods-ZoeyApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MXE9N2LLEZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ZoeyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.curve.zoey.hientran.ZoeyApp;
