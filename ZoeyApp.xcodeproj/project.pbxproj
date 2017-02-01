@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBE0E0191E41F4E200773AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0181E41F4E200773AD3 /* AppDelegate.swift */; };
+		EBE0E01B1E41F4E200773AD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E01A1E41F4E200773AD3 /* ViewController.swift */; };
+		EBE0E01E1E41F4E200773AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E01C1E41F4E200773AD3 /* Main.storyboard */; };
+		EBE0E0201E41F4E200773AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E01F1E41F4E200773AD3 /* Assets.xcassets */; };
+		EBE0E0231E41F4E200773AD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E0211E41F4E200773AD3 /* LaunchScreen.storyboard */; };
+		EBE0E02E1E41F4E200773AD3 /* ZoeyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBE0E02A1E41F4E200773AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE0E00D1E41F4E200773AD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE0E0141E41F4E200773AD3;
+			remoteInfo = ZoeyApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBE0E0151E41F4E200773AD3 /* ZoeyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoeyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE0E0181E41F4E200773AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBE0E01A1E41F4E200773AD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBE0E01D1E41F4E200773AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBE0E01F1E41F4E200773AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBE0E0221E41F4E200773AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBE0E0241E41F4E200773AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE0E0291E41F4E200773AD3 /* ZoeyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoeyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoeyAppTests.swift; sourceTree = "<group>"; };
+		EBE0E02F1E41F4E200773AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBE0E0121E41F4E200773AD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE0E0261E41F4E200773AD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBE0E00C1E41F4E200773AD3 = {
+			isa = PBXGroup;
+			children = (
+				EBE0E0171E41F4E200773AD3 /* ZoeyApp */,
+				EBE0E02C1E41F4E200773AD3 /* ZoeyAppTests */,
+				EBE0E0161E41F4E200773AD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBE0E0161E41F4E200773AD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0E0151E41F4E200773AD3 /* ZoeyApp.app */,
+				EBE0E0291E41F4E200773AD3 /* ZoeyAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBE0E0171E41F4E200773AD3 /* ZoeyApp */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0E0181E41F4E200773AD3 /* AppDelegate.swift */,
+				EBE0E01A1E41F4E200773AD3 /* ViewController.swift */,
+				EBE0E01C1E41F4E200773AD3 /* Main.storyboard */,
+				EBE0E01F1E41F4E200773AD3 /* Assets.xcassets */,
+				EBE0E0211E41F4E200773AD3 /* LaunchScreen.storyboard */,
+				EBE0E0241E41F4E200773AD3 /* Info.plist */,
+			);
+			path = ZoeyApp;
+			sourceTree = "<group>";
+		};
+		EBE0E02C1E41F4E200773AD3 /* ZoeyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */,
+				EBE0E02F1E41F4E200773AD3 /* Info.plist */,
+			);
+			path = ZoeyAppTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBE0E0141E41F4E200773AD3 /* ZoeyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE0E0321E41F4E200773AD3 /* Build configuration list for PBXNativeTarget "ZoeyApp" */;
+			buildPhases = (
+				EBE0E0111E41F4E200773AD3 /* Sources */,
+				EBE0E0121E41F4E200773AD3 /* Frameworks */,
+				EBE0E0131E41F4E200773AD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZoeyApp;
+			productName = ZoeyApp;
+			productReference = EBE0E0151E41F4E200773AD3 /* ZoeyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBE0E0281E41F4E200773AD3 /* ZoeyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE0E0351E41F4E200773AD3 /* Build configuration list for PBXNativeTarget "ZoeyAppTests" */;
+			buildPhases = (
+				EBE0E0251E41F4E200773AD3 /* Sources */,
+				EBE0E0261E41F4E200773AD3 /* Frameworks */,
+				EBE0E0271E41F4E200773AD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBE0E02B1E41F4E200773AD3 /* PBXTargetDependency */,
+			);
+			name = ZoeyAppTests;
+			productName = ZoeyAppTests;
+			productReference = EBE0E0291E41F4E200773AD3 /* ZoeyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBE0E00D1E41F4E200773AD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Hien Tran";
+				TargetAttributes = {
+					EBE0E0141E41F4E200773AD3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MXE9N2LLEZ;
+						ProvisioningStyle = Automatic;
+					};
+					EBE0E0281E41F4E200773AD3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MXE9N2LLEZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EBE0E0141E41F4E200773AD3;
+					};
+				};
+			};
+			buildConfigurationList = EBE0E0101E41F4E200773AD3 /* Build configuration list for PBXProject "ZoeyApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBE0E00C1E41F4E200773AD3;
+			productRefGroup = EBE0E0161E41F4E200773AD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBE0E0141E41F4E200773AD3 /* ZoeyApp */,
+				EBE0E0281E41F4E200773AD3 /* ZoeyAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBE0E0131E41F4E200773AD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE0E0231E41F4E200773AD3 /* LaunchScreen.storyboard in Resources */,
+				EBE0E0201E41F4E200773AD3 /* Assets.xcassets in Resources */,
+				EBE0E01E1E41F4E200773AD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE0E0271E41F4E200773AD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBE0E0111E41F4E200773AD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE0E01B1E41F4E200773AD3 /* ViewController.swift in Sources */,
+				EBE0E0191E41F4E200773AD3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE0E0251E41F4E200773AD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE0E02E1E41F4E200773AD3 /* ZoeyAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBE0E02B1E41F4E200773AD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE0E0141E41F4E200773AD3 /* ZoeyApp */;
+			targetProxy = EBE0E02A1E41F4E200773AD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBE0E01C1E41F4E200773AD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE0E01D1E41F4E200773AD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE0E0211E41F4E200773AD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE0E0221E41F4E200773AD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBE0E0301E41F4E200773AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBE0E0311E41F4E200773AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBE0E0331E41F4E200773AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MXE9N2LLEZ;
+				INFOPLIST_FILE = ZoeyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.curve.zoey.hientran.ZoeyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EBE0E0341E41F4E200773AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MXE9N2LLEZ;
+				INFOPLIST_FILE = ZoeyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.curve.zoey.hientran.ZoeyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EBE0E0361E41F4E200773AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = MXE9N2LLEZ;
+				INFOPLIST_FILE = ZoeyAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.curve.zoey.hientran.ZoeyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZoeyApp.app/ZoeyApp";
+			};
+			name = Debug;
+		};
+		EBE0E0371E41F4E200773AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = MXE9N2LLEZ;
+				INFOPLIST_FILE = ZoeyAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.curve.zoey.hientran.ZoeyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZoeyApp.app/ZoeyApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBE0E0101E41F4E200773AD3 /* Build configuration list for PBXProject "ZoeyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE0E0301E41F4E200773AD3 /* Debug */,
+				EBE0E0311E41F4E200773AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE0E0321E41F4E200773AD3 /* Build configuration list for PBXNativeTarget "ZoeyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE0E0331E41F4E200773AD3 /* Debug */,
+				EBE0E0341E41F4E200773AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EBE0E0351E41F4E200773AD3 /* Build configuration list for PBXNativeTarget "ZoeyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE0E0361E41F4E200773AD3 /* Debug */,
+				EBE0E0371E41F4E200773AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBE0E00D1E41F4E200773AD3 /* Project object */;
+}
