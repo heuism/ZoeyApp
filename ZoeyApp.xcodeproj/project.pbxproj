@@ -17,6 +17,8 @@
 		EBE0E02E1E41F4E200773AD3 /* ZoeyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E02D1E41F4E200773AD3 /* ZoeyAppTests.swift */; };
 		EBE0E03C1E41F5B300773AD3 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E03B1E41F5B300773AD3 /* DetailVC.swift */; };
 		EBE0E0401E41F6D100773AD3 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E03F1E41F6D100773AD3 /* DeviceCell.swift */; };
+		EBE0E0471E41FFDF00773AD3 /* AccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0451E41FFDF00773AD3 /* AccelerometerFilter.m */; };
+		EBE0E0481E41FFDF00773AD3 /* APLGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0461E41FFDF00773AD3 /* APLGraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,11 @@
 		EBE0E02F1E41F4E200773AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE0E03B1E41F5B300773AD3 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		EBE0E03F1E41F6D100773AD3 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		EBE0E0421E41FFDF00773AD3 /* ZoeyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZoeyApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		EBE0E0431E41FFDF00773AD3 /* APLGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLGraphView.h; sourceTree = SOURCE_ROOT; };
+		EBE0E0441E41FFDF00773AD3 /* AccelerometerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerFilter.h; sourceTree = SOURCE_ROOT; };
+		EBE0E0451E41FFDF00773AD3 /* AccelerometerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerFilter.m; sourceTree = SOURCE_ROOT; };
+		EBE0E0461E41FFDF00773AD3 /* APLGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLGraphView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +120,7 @@
 		EBE0E0171E41F4E200773AD3 /* ZoeyApp */ = {
 			isa = PBXGroup;
 			children = (
+				EBE0E0411E41FF9C00773AD3 /* Accelerometer */,
 				EBE0E03A1E41F58A00773AD3 /* Controller */,
 				EBE0E0391E41F58300773AD3 /* View */,
 				EBE0E0381E41F57D00773AD3 /* Model */,
@@ -156,6 +164,18 @@
 				EBE0E03B1E41F5B300773AD3 /* DetailVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		EBE0E0411E41FF9C00773AD3 /* Accelerometer */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0E0431E41FFDF00773AD3 /* APLGraphView.h */,
+				EBE0E0441E41FFDF00773AD3 /* AccelerometerFilter.h */,
+				EBE0E0451E41FFDF00773AD3 /* AccelerometerFilter.m */,
+				EBE0E0461E41FFDF00773AD3 /* APLGraphView.m */,
+				EBE0E0421E41FFDF00773AD3 /* ZoeyApp-Bridging-Header.h */,
+			);
+			name = Accelerometer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +235,7 @@
 					EBE0E0141E41F4E200773AD3 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = MXE9N2LLEZ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					EBE0E0281E41F4E200773AD3 = {
@@ -366,6 +387,8 @@
 				EBE0E0191E41F4E200773AD3 /* AppDelegate.swift in Sources */,
 				EBE0E03C1E41F5B300773AD3 /* DetailVC.swift in Sources */,
 				EBE0E0401E41F6D100773AD3 /* DeviceCell.swift in Sources */,
+				EBE0E0471E41FFDF00773AD3 /* AccelerometerFilter.m in Sources */,
+				EBE0E0481E41FFDF00773AD3 /* APLGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,11 +526,14 @@
 			baseConfigurationReference = 9E0A9D7457F001B62CF5A1C6 /* Pods-ZoeyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MXE9N2LLEZ;
 				INFOPLIST_FILE = ZoeyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.curve.zoey.hientran.ZoeyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZoeyApp/ZoeyApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -517,11 +543,13 @@
 			baseConfigurationReference = 1551569FF63B5987CF048494 /* Pods-ZoeyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MXE9N2LLEZ;
 				INFOPLIST_FILE = ZoeyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.curve.zoey.hientran.ZoeyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZoeyApp/ZoeyApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

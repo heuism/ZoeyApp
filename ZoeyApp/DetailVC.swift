@@ -30,7 +30,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var disconnctBtn : UIButton!
     @IBOutlet weak var resetBtn : UIButton!
     
-    //@IBOutlet weak var accGraphView : APLGraphView!
+    @IBOutlet weak var accGraphView : APLGraphView!
     @IBOutlet weak var startAccBtn : UIButton!
     @IBOutlet weak var stopAccBtn : UIButton!
     private var accelerometerDataArray = [MBLAccelerometerData]()
@@ -39,7 +39,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var tapStyle : UISegmentedControl!
     @IBOutlet weak var shareAccData : UIButton!
     
-    //    @IBOutlet weak var gyroGraphView : APLGraphView!
+    @IBOutlet weak var gyroGraphView : APLGraphView!
     @IBOutlet weak var startGyroBtn : UIButton!
     @IBOutlet weak var stopGyroBtn : UIButton!
     @IBOutlet weak var gyroScale : UISegmentedControl!
@@ -241,7 +241,7 @@ class DetailVC: UIViewController {
         streamingEvents.append(device.accelerometer!.dataReadyEvent)
         device.accelerometer!.dataReadyEvent.startNotificationsAsync { (acceleration, error) in
             if let acceleration = acceleration {
-                //                self.accGraphView.addX(acceleration.x, y: acceleration.y, z: acceleration.z)
+                                self.accGraphView.addX(acceleration.x, y: acceleration.y, z: acceleration.z)
                 // Add data to data array for saving
                 print("-----> \(acceleration)")
                 self.accelerometerDataArray.append(acceleration)
@@ -273,7 +273,7 @@ class DetailVC: UIViewController {
         streamingEvents.append(device.gyro!.dataReadyEvent)
         device.gyro!.dataReadyEvent.startNotificationsAsync { (obj, error) in
             if let obj = obj {
-                //                self.gyroGraphView.addX(obj.x * 0.008, y: obj.y * 0.008, z: obj.z * 0.008)
+                                self.gyroGraphView.addX(obj.x * 0.008, y: obj.y * 0.008, z: obj.z * 0.008)
                 // Add data to data array for saving
                 //                print("-----> \(obj)")
                 self.gyroscopeDataArray.append(obj)
@@ -292,54 +292,21 @@ class DetailVC: UIViewController {
         //        gyroscopeDataArray.removeAll()
     }
     
-    //    @IBAction func startMagPressed(_ sender: Any) {
-    //        startMagBtn.isEnabled = false
-    //        stopMagBtn.isEnabled = true
-    //        //        startLog.isEnabled = false
-    //        //        stopLog.isEnabled = false
-    ////        updateAccelerometerBMI160Settings()
-    //        // These variables are used for data recording
-    //        //var array = [MBLAccelerometerData]() /* capacity: 1000 */
-    //        //accelerometerDataArray = array
-    //        magGraphView.fullScale = 4
-    //        let magnetometer = device.magnetometer as! MBLMagnetometerBMM150
-    //        streamingEvents.insert(magnetometer.periodicMagneticField)
-    //        magnetometer.periodicMagneticField.startNotificationsAsync { (obj, error) in
-    //            if let obj = obj {
-    //                self.accGraphView.addX(obj.x * 20000.0, y: obj.y * 20000.0, z: obj.z * 20000.0)
-    //                // Add data to data array for saving
-    ////                print("-----> \(obj)")
-    //                self.magnetometerDataArray.append(obj)
-    //            }
-    //        }
-    //    }
-    //
-    //    @IBAction func stopMagPressed(_ sender: Any) {
-    //        startMagBtn.isEnabled = true
-    //        stopMagBtn.isEnabled = false
-    //        //        startLog.isEnabled = true
-    //        let magnetometer = device.magnetometer as! MBLMagnetometerBMM150
-    //        streamingEvents.remove(magnetometer.periodicMagneticField)
-    //        print("final data set is : ===> \(magnetometerDataArray.count)")
-    //        magnetometer.periodicMagneticField.stopNotificationsAsync()
-    //        magnetometerDataArray.removeAll()
-    //    }
-    
     func updateAccelerometerBMI160Settings() {
         let accelerometerBMI160 = self.device.accelerometer as! MBLAccelerometerBMI160
         switch self.accScale.selectedSegmentIndex {
         case 0:
             accelerometerBMI160.fullScaleRange = .range2G
-        //            self.accGraphView.fullScale = 2
+                    self.accGraphView.fullScale = 2
         case 1:
             accelerometerBMI160.fullScaleRange = .range4G
-        //            self.accGraphView.fullScale = 4
+                    self.accGraphView.fullScale = 4
         case 2:
             accelerometerBMI160.fullScaleRange = .range8G
-        //            self.accGraphView.fullScale = 8
+                    self.accGraphView.fullScale = 8
         case 3:
             accelerometerBMI160.fullScaleRange = .range16G
-        //            self.accGraphView.fullScale = 16
+                    self.accGraphView.fullScale = 16
         default:
             print("Unexpected accelerometerBMI160Scale value")
         }
@@ -353,19 +320,19 @@ class DetailVC: UIViewController {
         switch self.gyroScale.selectedSegmentIndex {
         case 0:
             gyroBMI160.fullScaleRange = .range125
-        //            self.gyroGraphView.fullScale = 1
+                    self.gyroGraphView.fullScale = 1
         case 1:
             gyroBMI160.fullScaleRange = .range250
-        //            self.gyroGraphView.fullScale = 2
+                    self.gyroGraphView.fullScale = 2
         case 2:
             gyroBMI160.fullScaleRange = .range500
-        //            self.gyroGraphView.fullScale = 4
+                    self.gyroGraphView.fullScale = 4
         case 3:
             gyroBMI160.fullScaleRange = .range1000
-        //            self.gyroGraphView.fullScale = 8
+                    self.gyroGraphView.fullScale = 8
         case 4:
             gyroBMI160.fullScaleRange = .range2000
-        //            self.gyroGraphView.fullScale = 16
+                    self.gyroGraphView.fullScale = 16
         default:
             print("Unexpected gyroBMI160Scale value")
         }
