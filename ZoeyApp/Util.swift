@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AIToolbox
+//import AIToolbox
 import Surge
 
 protocol Numberic{}
@@ -242,67 +242,67 @@ class Util {
     //        }
     //    }
     //
-    //    func testingClassificationAIToolbox() {
-    //
-    //       let trainData = DataSet(dataType: .classification, inputDimension: 2, outputDimension: 1)
-    //        do {
-    //            try trainData.addDataPoint(input: [0.2, 0.9], dataClass:0)
-    //            try trainData.addDataPoint(input: [0.8, 0.3], dataClass:0)
-    //            try trainData.addDataPoint(input: [0.5, 0.6], dataClass:0)
-    //            try trainData.addDataPoint(input: [0.2, 0.7], dataClass:1)
-    //            try trainData.addDataPoint(input: [0.2, 0.3], dataClass:1)
-    //            try trainData.addDataPoint(input: [0.4, 0.5], dataClass:1)
-    //            try trainData.addDataPoint(input: [0.5, 0.4], dataClass:2)
-    //            try trainData.addDataPoint(input: [0.3, 0.2], dataClass:2)
-    //            try trainData.addDataPoint(input: [0.7, 0.2], dataClass:2)
-    //        }
-    //        catch {
-    //            print("error creating training data")
-    //        }
-    //
-    //        //  Create a model
-    //        let svm = SVMModel(problemType: .c_SVM_Classification, kernelSettings: KernelParameters(type: .linear, degree: 0, gamma: 0.5, coef0: 0.0))
-    //
-    //        //  Train the model
-    //        do {
-    ////            try svm.train(trainData)
-    //            try svm.trainClassifier(trainData)
-    //        }
-    //        catch let error as Error {
-    //            print("SVM Training error is: \(error)")
-    //        }
-    //
-    //        //  Create a data set with the sequence
-    //        let testData = DataSet(dataType: .classification, inputDimension: 2, outputDimension: 1)
-    //        do {
-    //            try testData.addTestDataPoint(input: [0.7, 0.6])
-    //            try testData.addTestDataPoint(input: [0.5, 0.7])
-    //            try testData.addTestDataPoint(input: [0.1, 0.6])
-    //            try testData.addTestDataPoint(input: [0.1, 0.4])
-    //            try testData.addTestDataPoint(input: [0.3, 0.1])
-    //            try testData.addTestDataPoint(input: [0.7, 0.1])
-    //        }
-    //        catch {
-    //            print("Invalid test data set created")
-    //        }
-    //
-    //        do {
-    //            try svm.classify(testData)
-    ////            try svm.predictValues(trainData)
-    //        }
-    //        catch {
-    //            print("Error having SVM calculate results")
-    //        }
-    //        
-    //        //  Use the results
-    //        do {
-    //            for index in 0...testData.size-1 {
-    //                let result = try testData.getClass(index)
-    //                let input = try testData.getInput(index)
-    //                print("The value is: \(input) and result is: \(result)")
-    //            }
-    //        } catch {
-    //            print("Error getting results from data set")
-    //        }    }
-    //
+//        func testingClassificationAIToolbox() {
+//    
+//           let trainData = DataSet(dataType: .classification, inputDimension: 2, outputDimension: 1)
+//            do {
+//                try trainData.addDataPoint(input: [0.2, 0.9], dataClass:0)
+//                try trainData.addDataPoint(input: [0.8, 0.3], dataClass:0)
+//                try trainData.addDataPoint(input: [0.5, 0.6], dataClass:0)
+//                try trainData.addDataPoint(input: [0.2, 0.7], dataClass:1)
+//                try trainData.addDataPoint(input: [0.2, 0.3], dataClass:1)
+//                try trainData.addDataPoint(input: [0.4, 0.5], dataClass:1)
+//                try trainData.addDataPoint(input: [0.5, 0.4], dataClass:2)
+//                try trainData.addDataPoint(input: [0.3, 0.2], dataClass:2)
+//                try trainData.addDataPoint(input: [0.7, 0.2], dataClass:2)
+//            }
+//            catch {
+//                print("error creating training data")
+//            }
+//            //  Create a model
+//            let svm = SVMModel(problemType: .c_SVM_Classification, kernelSettings: KernelParameters(type: .linear, degree: 0, gamma: 0.5, coef0: 0.0))
+//    
+//            //  Train the model
+//            do {
+//    //            try svm.train(trainData)
+//                try svm.trainClassifier(trainData)
+//            }
+//            catch let error as Error {
+//                print("SVM Training error is: \(error)")
+//            }
+//    
+//            //  Create a data set with the sequence
+//            let testData = DataSet(dataType: .classification, inputDimension: 2, outputDimension: 1)
+//            do {
+//                try testData.addTestDataPoint(input: [0.7, 0.6])
+//                try testData.addTestDataPoint(input: [0.5, 0.7])
+//                try testData.addTestDataPoint(input: [0.1, 0.6])
+//                try testData.addTestDataPoint(input: [0.1, 0.4])
+//                try testData.addTestDataPoint(input: [0.3, 0.1])
+//                try testData.addTestDataPoint(input: [0.7, 0.1])
+//            }
+//            catch {
+//                print("Invalid test data set created")
+//            }
+//    
+//            do {
+//                try svm.classify(testData)
+//    //            try svm.predictValues(trainData)
+//            }
+//            catch {
+//                print("Error having SVM calculate results")
+//            }
+//            
+//            //  Use the results
+//            do {
+//                for index in 0...testData.size-1 {
+//                    let result = try testData.getClass(index)
+//                    let input = try testData.getInput(index)
+//                    print("The value is: \(input) and result is: \(result)")
+//                }
+//            } catch {
+//                print("Error getting results from data set")
+//            }
+//    }
+    
 }
