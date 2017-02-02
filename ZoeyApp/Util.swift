@@ -151,6 +151,10 @@ class Util {
         return returnArray
     }
     
+    func combineToFeatures(accel: [[Double]], gyro: [[Double]]) -> [[Double]] {
+        <#function body#>
+    }
+    
     //    func autocorrFeatures(data: [[Double]], frequency: Double) -> [Double] {
     //
     //        var returnArry = [Double]()

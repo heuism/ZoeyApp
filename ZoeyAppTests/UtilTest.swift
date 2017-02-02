@@ -37,14 +37,14 @@ class UtilTest: XCTestCase {
         
         let result = 11.0
         
-        XCTAssertEqual(util.testms(array: arr), result)
+        XCTAssertEqual(util.testms(array: arr), result, "This is test MeanSquare result")
         
     }
     
     func testInitVect() {
         let result = [1.0, 1.0, 1.0, 1.0]
         
-        XCTAssertEqual(util.initFeatVec(count: 4, val: 1.0) as! [Double], result)
+        XCTAssertEqual(util.initFeatVec(count: 4, val: 1.0) as! [Double], result, "This is test InitVect result")
     }
     
     func testAvgAxisValue() {
@@ -52,7 +52,7 @@ class UtilTest: XCTestCase {
         
         let result = [2.5, 3.5, 4.5]
         
-        XCTAssertEqual(util.avgAxisValue(data: axisVals), result)
+        XCTAssertEqual(util.avgAxisValue(data: axisVals), result, "This is AvgValue result")
     }
     
     func testRootMeanSquareAxisVals() {
@@ -60,7 +60,33 @@ class UtilTest: XCTestCase {
         
         let result = [(sqrt(30)/2).roundTo(places: 4), (sqrt(54)/2).roundTo(places: 4), (sqrt(86)/2).roundTo(places: 4)]
         
-        XCTAssertEqual(util.rootMeanSquareAxisVals(data: axisVals), result)
+        XCTAssertEqual(util.rootMeanSquareAxisVals(data: axisVals), result, "This is RootMeanSquareAxis result")
+    }
+    
+    func testCombineToFeatures() {
+        let accels: [[Double]] = [
+            [1.0, 2.0, 3.0, 4.0],
+            [2.0, 3.0, 4.0, 5.0],
+            [3.0, 4.0, 5.0, 6.0],
+            [4.0, 5.0, 6.0, 7.0],
+            [5.0, 6.0, 7.0, 8.0]
+        ]
+        
+        let gyros: [[Double]] = [
+            [5.0, 6.0, 7.0, 8.0],
+            [6.0, 7.0, 8.0, 9.0],
+            [7.0, 8.0, 9.0, 10.0],
+            [8.0, 9.0, 10.0, 11.0]
+        ]
+        
+        let combineArray = [
+            [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0],
+            [2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0],
+            [3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0],
+            [4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0]
+        ]
+        
+        XCTAssertEqual(util.combineToFeatures(accels, gyros), combineArray, "This is the CombineToArray result")
     }
     
 }
