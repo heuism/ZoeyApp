@@ -70,7 +70,7 @@ class Util {
         
         //featVect[3...5]
         //do the rms for the value of each axis
-        featVec.append(contentsOf: (rootMeanSquareAxis(data: newData)))
+        featVec.append(contentsOf: (rootMeanSquareAxisVals(data: newData)))
         
         ////featVect[6...14]
         ////Autocorrelation features for all three acceleration components (3 each): height of main peak; height and position of second peak
@@ -105,7 +105,7 @@ class Util {
             let axisAvg = col.average
             
             // round to 4 number after decimal point and assign to vector
-            returnArr.append(axisAvg)
+            returnArr.append(axisAvg.roundTo(places: 4))
             //            featVec[axis-1] = axisAvg.roundTo(places: 4)
             
             //            featVec[axis - 1] = Surge.round(axisAvg)
@@ -123,7 +123,7 @@ class Util {
         return tempData
     }
     
-    func rootMeanSquareAxis(data: [[Double]]) -> [Double] {
+    func rootMeanSquareAxisVals(data: [[Double]]) -> [Double] {
         
         var returnArray = [Double]()
         
@@ -139,7 +139,7 @@ class Util {
             let rms_Axis = Surge.sqrt(meanS_Axis)
             
             // round to 4 number after decimal point and assign to vector
-            returnArray.append(rms_Axis)
+            returnArray.append(rms_Axis.roundTo(places: 4))
             
             //            featVec[axis - 1] = Surge.round(axisAvg)
             
