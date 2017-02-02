@@ -22,6 +22,8 @@
 		EBE0E0811E420B1100773AD3 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0E07E1E420B0900773AD3 /* Surge.framework */; };
 		EBE0E0821E420B1100773AD3 /* Surge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0E07E1E420B0900773AD3 /* Surge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBE0E0861E420B6500773AD3 /* UtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0851E420B6500773AD3 /* UtilTest.swift */; };
+		EBEF45C21E42C393006A62B2 /* AIToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEF45C11E42C393006A62B2 /* AIToolbox.framework */; };
+		EBEF45C31E42C393006A62B2 /* AIToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBEF45C11E42C393006A62B2 /* AIToolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,41 @@
 			remoteGlobalIDString = F8A1E1A919917A79009735E2;
 			remoteInfo = Surge;
 		};
+		EBEF45B71E42C367006A62B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEF45AF1E42C367006A62B2 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EBA29AB1A91350C0012CEC9;
+			remoteInfo = AIToolbox;
+		};
+		EBEF45B91E42C367006A62B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEF45AF1E42C367006A62B2 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EBA29B61A91350C0012CEC9;
+			remoteInfo = AIToolboxTests;
+		};
+		EBEF45BB1E42C367006A62B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEF45AF1E42C367006A62B2 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0E0A4F931C133E8800AD5AAE;
+			remoteInfo = AIToolboxIOS;
+		};
+		EBEF45BD1E42C367006A62B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEF45AF1E42C367006A62B2 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0E0A4F9C1C133E8800AD5AAE;
+			remoteInfo = AIToolboxIOSTests;
+		};
+		EBEF45BF1E42C367006A62B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEF45AF1E42C367006A62B2 /* AIToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB0D5A231CAF09230097590B;
+			remoteInfo = "AIToolbox copy";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +99,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EBEF45C31E42C393006A62B2 /* AIToolbox.framework in Embed Frameworks */,
 				EBE0E0821E420B1100773AD3 /* Surge.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -95,6 +133,8 @@
 		EBE0E05F1E4208BD00773AD3 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = "../../Master of IT-Melbourne Uni/Curve Tomorrow Studentship/Surge/Surge.xcodeproj"; sourceTree = "<group>"; };
 		EBE0E0851E420B6500773AD3 /* UtilTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilTest.swift; sourceTree = "<group>"; };
+		EBEF45AF1E42C367006A62B2 /* AIToolbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIToolbox.xcodeproj; path = "../../Master of IT-Melbourne Uni/Curve Tomorrow Studentship/AIToolbox/AIToolbox.xcodeproj"; sourceTree = "<group>"; };
+		EBEF45C11E42C393006A62B2 /* AIToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIToolbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE0E0811E420B1100773AD3 /* Surge.framework in Frameworks */,
+				EBEF45C21E42C393006A62B2 /* AIToolbox.framework in Frameworks */,
 				C748B96643ED8FE4A296DBDD /* Pods_ZoeyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +182,8 @@
 		EBE0E00C1E41F4E200773AD3 = {
 			isa = PBXGroup;
 			children = (
+				EBEF45C11E42C393006A62B2 /* AIToolbox.framework */,
+				EBEF45AF1E42C367006A62B2 /* AIToolbox.xcodeproj */,
 				EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */,
 				EBE0E0171E41F4E200773AD3 /* ZoeyApp */,
 				EBE0E02C1E41F4E200773AD3 /* ZoeyAppTests */,
@@ -230,6 +273,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EBEF45B01E42C367006A62B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF45B81E42C367006A62B2 /* AIToolbox.framework */,
+				EBEF45BA1E42C367006A62B2 /* AIToolboxTests.xctest */,
+				EBEF45BC1E42C367006A62B2 /* AIToolbox.framework */,
+				EBEF45BE1E42C367006A62B2 /* AIToolboxIOSTests.xctest */,
+				EBEF45C01E42C367006A62B2 /* AIToolbox copy.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,6 +368,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = EBEF45B01E42C367006A62B2 /* Products */;
+					ProjectRef = EBEF45AF1E42C367006A62B2 /* AIToolbox.xcodeproj */;
+				},
+				{
 					ProductGroup = EBE0E0791E420B0800773AD3 /* Products */;
 					ProjectRef = EBE0E0781E420B0800773AD3 /* Surge.xcodeproj */;
 				},
@@ -338,6 +397,41 @@
 			fileType = wrapper.cfbundle;
 			path = SurgeTests.xctest;
 			remoteRef = EBE0E07F1E420B0900773AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBEF45B81E42C367006A62B2 /* AIToolbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AIToolbox.framework;
+			remoteRef = EBEF45B71E42C367006A62B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBEF45BA1E42C367006A62B2 /* AIToolboxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AIToolboxTests.xctest;
+			remoteRef = EBEF45B91E42C367006A62B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBEF45BC1E42C367006A62B2 /* AIToolbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AIToolbox.framework;
+			remoteRef = EBEF45BB1E42C367006A62B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBEF45BE1E42C367006A62B2 /* AIToolboxIOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AIToolboxIOSTests.xctest;
+			remoteRef = EBEF45BD1E42C367006A62B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBEF45C01E42C367006A62B2 /* AIToolbox copy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "AIToolbox copy.framework";
+			remoteRef = EBEF45BF1E42C367006A62B2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
