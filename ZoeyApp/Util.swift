@@ -151,6 +151,27 @@ class Util {
         return returnArray
     }
     
+    func combineToFeatures(accels: [[Double]], gyros: [[Double]]) -> [[Double]] {
+        let accel_length: Int = accels.capacity
+        let gyro_length: Int = gyros.count
+        
+        let standard_length: Int!
+        
+        if accel_length < gyro_length {
+            standard_length = accel_length
+        } else {
+            standard_length = gyro_length
+        }
+        
+        var featuresSet: [[Double]]!
+        
+        for i in 0...standard_length-1 {
+            featuresSet[i].append(contentsOf: accels[i])
+            featuresSet[i].append(contentsOf: gyros[i])
+        }
+        return featuresSet
+    }
+    
     //    func autocorrFeatures(data: [[Double]], frequency: Double) -> [Double] {
     //
     //        var returnArry = [Double]()

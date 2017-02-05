@@ -63,4 +63,29 @@ class UtilTest: XCTestCase {
         XCTAssertEqual(util.rootMeanSquareAxisVals(data: axisVals), result)
     }
     
+    func testCombineToFeatures() {
+        let accels: [[Double]] = [
+            [1.0, 2.0, 3.0, 4.0],
+            [2.0, 3.0, 4.0, 5.0],
+            [3.0, 4.0, 5.0, 6.0],
+            [4.0, 5.0, 6.0, 7.0],
+            [5.0, 6.0, 7.0, 8.0]
+        ]
+        
+        let gyros: [[Double]] = [
+            [5.0, 6.0, 7.0, 8.0],
+            [6.0, 7.0, 8.0, 9.0],
+            [7.0, 8.0, 9.0, 10.0],
+            [8.0, 9.0, 10.0, 11.0]
+        ]
+        
+        let combineArray: [[Double]] = [
+            [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0],
+            [2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0],
+            [3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0],
+            [4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0]
+        ]
+        
+        XCTAssertEqual(util.combineToFeatures(accels: accels, gyros: gyros), combineArray, "This is the CombineToArray result")
+    }
 }
