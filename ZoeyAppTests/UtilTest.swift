@@ -9,6 +9,14 @@
 import XCTest
 @testable import ZoeyApp
 
+protocol Numberic{}
+
+extension Float: Numberic{}
+
+extension Int: Numberic{}
+
+extension Double: Numberic{}
+
 extension Double {
     /// Rounds the double to decimal places value
     func roundTo(places:Int) -> Double {
@@ -31,13 +39,13 @@ class UtilTest: XCTestCase {
         super.tearDown()
     }
     
-    func testMS() {
+    func testGetMS() {
         
         let arr = [1.0, 2.0, 3.0, 4.0, 5.0]
         
         let result = 11.0
         
-        XCTAssertEqual(util.testms(array: arr), result)
+        XCTAssertEqual(util.getMS(array: arr), result)
         
     }
     
@@ -46,7 +54,7 @@ class UtilTest: XCTestCase {
         
         XCTAssertEqual(util.initFeatVec(count: 4, val: 1.0) as! [Double], result)
     }
-    
+
     func testAvgAxisValue() {
         let axisVals = [[1.0, 2.0, 3.0],[2.0, 3.0, 4.0],[3.0, 4.0, 5.0],[4.0, 5.0, 6.0]]
         
@@ -54,7 +62,7 @@ class UtilTest: XCTestCase {
         
         XCTAssertEqual(util.avgAxisValue(data: axisVals), result)
     }
-    
+//    
     func testRootMeanSquareAxisVals() {
         let axisVals = [[1.0, 2.0, 3.0],[2.0, 3.0, 4.0],[3.0, 4.0, 5.0],[4.0, 5.0, 6.0]]
         
@@ -62,7 +70,7 @@ class UtilTest: XCTestCase {
         
         XCTAssertEqual(util.rootMeanSquareAxisVals(data: axisVals), result)
     }
-    
+//    
     func testCombineToFeatures() {
         let accels: [[Double]] = [
             [1.0, 2.0, 3.0, 4.0],
@@ -86,6 +94,15 @@ class UtilTest: XCTestCase {
             [4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0]
         ]
         
-        XCTAssertEqual(util.combineToFeatures(accels: accels, gyros: gyros), combineArray, "This is the CombineToArray result")
+        let a2DTest = util.combineToFeatures(accels: accels, gyros: gyros)
+        
+        for i in 0..<combineArray.count {
+            XCTAssertEqual(a2DTest[i], combineArray[i], "This is the result of combine")
+        }
+        
+    }
+    
+    func testClassificationAIToolbox() {
+        util.classificationAIToolbox()
     }
 }
