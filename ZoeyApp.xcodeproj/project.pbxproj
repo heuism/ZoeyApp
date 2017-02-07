@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		7AE7E29D482F67EA2B80C7A5 /* Pods_ZoeyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23D22FB0F395C95A28BDF9B /* Pods_ZoeyAppTests.framework */; };
 		C748B96643ED8FE4A296DBDD /* Pods_ZoeyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8158A83BB4161A1ABA6BAAC /* Pods_ZoeyApp.framework */; };
-		EB9827A41E47FA59000FCDED /* AIToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9827A31E47FA59000FCDED /* AIToolbox.framework */; };
-		EB9827A51E47FA59000FCDED /* AIToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB9827A31E47FA59000FCDED /* AIToolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB9827E51E482DD0000FCDED /* AIToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9827E41E482DD0000FCDED /* AIToolbox.framework */; };
+		EB9827E61E482DD0000FCDED /* AIToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB9827E41E482DD0000FCDED /* AIToolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB9827F11E48470A000FCDED /* EnumerationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9827F01E48470A000FCDED /* EnumerationClass.swift */; };
+		EB9828191E497050000FCDED /* FilterZoey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9828181E497050000FCDED /* FilterZoey.swift */; };
 		EBE0E0191E41F4E200773AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E0181E41F4E200773AD3 /* AppDelegate.swift */; };
 		EBE0E01B1E41F4E200773AD3 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0E01A1E41F4E200773AD3 /* DevicesVC.swift */; };
 		EBE0E01E1E41F4E200773AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0E01C1E41F4E200773AD3 /* Main.storyboard */; };
@@ -25,37 +27,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EB9827941E47FA38000FCDED /* PBXContainerItemProxy */ = {
+		EB9827DA1E482A0F000FCDED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EB98278C1E47FA38000FCDED /* AIToolbox.xcodeproj */;
+			containerPortal = EB9827D21E482A0F000FCDED /* AIToolbox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0EBA29AB1A91350C0012CEC9;
 			remoteInfo = AIToolbox;
 		};
-		EB9827961E47FA38000FCDED /* PBXContainerItemProxy */ = {
+		EB9827DC1E482A0F000FCDED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EB98278C1E47FA38000FCDED /* AIToolbox.xcodeproj */;
+			containerPortal = EB9827D21E482A0F000FCDED /* AIToolbox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0EBA29B61A91350C0012CEC9;
 			remoteInfo = AIToolboxTests;
 		};
-		EB9827981E47FA38000FCDED /* PBXContainerItemProxy */ = {
+		EB9827DE1E482A0F000FCDED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EB98278C1E47FA38000FCDED /* AIToolbox.xcodeproj */;
+			containerPortal = EB9827D21E482A0F000FCDED /* AIToolbox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0E0A4F931C133E8800AD5AAE;
 			remoteInfo = AIToolboxIOS;
 		};
-		EB98279A1E47FA38000FCDED /* PBXContainerItemProxy */ = {
+		EB9827E01E482A0F000FCDED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EB98278C1E47FA38000FCDED /* AIToolbox.xcodeproj */;
+			containerPortal = EB9827D21E482A0F000FCDED /* AIToolbox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0E0A4F9C1C133E8800AD5AAE;
 			remoteInfo = AIToolboxIOSTests;
 		};
-		EB98279C1E47FA38000FCDED /* PBXContainerItemProxy */ = {
+		EB9827E21E482A0F000FCDED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EB98278C1E47FA38000FCDED /* AIToolbox.xcodeproj */;
+			containerPortal = EB9827D21E482A0F000FCDED /* AIToolbox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FB0D5A231CAF09230097590B;
 			remoteInfo = "AIToolbox copy";
@@ -70,13 +72,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB9827A61E47FA59000FCDED /* Embed Frameworks */ = {
+		EB9827E71E482DD0000FCDED /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB9827A51E47FA59000FCDED /* AIToolbox.framework in Embed Frameworks */,
+				EB9827E61E482DD0000FCDED /* AIToolbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,8 +92,10 @@
 		9E0A9D7457F001B62CF5A1C6 /* Pods-ZoeyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoeyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoeyApp/Pods-ZoeyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C8158A83BB4161A1ABA6BAAC /* Pods_ZoeyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoeyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23D22FB0F395C95A28BDF9B /* Pods_ZoeyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoeyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB98278C1E47FA38000FCDED /* AIToolbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIToolbox.xcodeproj; path = "../../Master of IT-Melbourne Uni/Curve Tomorrow Studentship/AI_Toolbox/AIToolbox.xcodeproj"; sourceTree = "<group>"; };
-		EB9827A31E47FA59000FCDED /* AIToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIToolbox.framework; sourceTree = "<group>"; };
+		EB9827D21E482A0F000FCDED /* AIToolbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIToolbox.xcodeproj; path = "../../Master of IT-Melbourne Uni/Curve Tomorrow Studentship/AI_Toolbox/AIToolbox.xcodeproj"; sourceTree = "<group>"; };
+		EB9827E41E482DD0000FCDED /* AIToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIToolbox.framework; sourceTree = "<group>"; };
+		EB9827F01E48470A000FCDED /* EnumerationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumerationClass.swift; sourceTree = "<group>"; };
+		EB9828181E497050000FCDED /* FilterZoey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterZoey.swift; sourceTree = "<group>"; };
 		EBE0E0151E41F4E200773AD3 /* ZoeyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoeyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE0E0181E41F4E200773AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE0E01A1E41F4E200773AD3 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
@@ -117,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB9827A41E47FA59000FCDED /* AIToolbox.framework in Frameworks */,
+				EB9827E51E482DD0000FCDED /* AIToolbox.framework in Frameworks */,
 				C748B96643ED8FE4A296DBDD /* Pods_ZoeyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,14 +157,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB98278D1E47FA38000FCDED /* Products */ = {
+		EB9827D31E482A0F000FCDED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB9827951E47FA38000FCDED /* AIToolbox.framework */,
-				EB9827971E47FA38000FCDED /* AIToolboxTests.xctest */,
-				EB9827991E47FA38000FCDED /* AIToolbox.framework */,
-				EB98279B1E47FA38000FCDED /* AIToolboxIOSTests.xctest */,
-				EB98279D1E47FA38000FCDED /* AIToolbox copy.framework */,
+				EB9827DB1E482A0F000FCDED /* AIToolbox.framework */,
+				EB9827DD1E482A0F000FCDED /* AIToolboxTests.xctest */,
+				EB9827DF1E482A0F000FCDED /* AIToolbox.framework */,
+				EB9827E11E482A0F000FCDED /* AIToolboxIOSTests.xctest */,
+				EB9827E31E482A0F000FCDED /* AIToolbox copy.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,8 +172,8 @@
 		EBE0E00C1E41F4E200773AD3 = {
 			isa = PBXGroup;
 			children = (
-				EB9827A31E47FA59000FCDED /* AIToolbox.framework */,
-				EB98278C1E47FA38000FCDED /* AIToolbox.xcodeproj */,
+				EB9827E41E482DD0000FCDED /* AIToolbox.framework */,
+				EB9827D21E482A0F000FCDED /* AIToolbox.xcodeproj */,
 				EBE0E0171E41F4E200773AD3 /* ZoeyApp */,
 				EBE0E02C1E41F4E200773AD3 /* ZoeyAppTests */,
 				EBE0E0161E41F4E200773AD3 /* Products */,
@@ -216,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				EBE0E05F1E4208BD00773AD3 /* Util.swift */,
+				EB9827F01E48470A000FCDED /* EnumerationClass.swift */,
+				EB9828181E497050000FCDED /* FilterZoey.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -262,7 +268,7 @@
 				EBE0E0131E41F4E200773AD3 /* Resources */,
 				197D152F593BA89FD0D70A64 /* [CP] Embed Pods Frameworks */,
 				F39AF2733BF82315F203D9E3 /* [CP] Copy Pods Resources */,
-				EB9827A61E47FA59000FCDED /* Embed Frameworks */,
+				EB9827E71E482DD0000FCDED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,8 +337,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EB98278D1E47FA38000FCDED /* Products */;
-					ProjectRef = EB98278C1E47FA38000FCDED /* AIToolbox.xcodeproj */;
+					ProductGroup = EB9827D31E482A0F000FCDED /* Products */;
+					ProjectRef = EB9827D21E482A0F000FCDED /* AIToolbox.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -344,39 +350,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EB9827951E47FA38000FCDED /* AIToolbox.framework */ = {
+		EB9827DB1E482A0F000FCDED /* AIToolbox.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AIToolbox.framework;
-			remoteRef = EB9827941E47FA38000FCDED /* PBXContainerItemProxy */;
+			remoteRef = EB9827DA1E482A0F000FCDED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EB9827971E47FA38000FCDED /* AIToolboxTests.xctest */ = {
+		EB9827DD1E482A0F000FCDED /* AIToolboxTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = AIToolboxTests.xctest;
-			remoteRef = EB9827961E47FA38000FCDED /* PBXContainerItemProxy */;
+			remoteRef = EB9827DC1E482A0F000FCDED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EB9827991E47FA38000FCDED /* AIToolbox.framework */ = {
+		EB9827DF1E482A0F000FCDED /* AIToolbox.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AIToolbox.framework;
-			remoteRef = EB9827981E47FA38000FCDED /* PBXContainerItemProxy */;
+			remoteRef = EB9827DE1E482A0F000FCDED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EB98279B1E47FA38000FCDED /* AIToolboxIOSTests.xctest */ = {
+		EB9827E11E482A0F000FCDED /* AIToolboxIOSTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = AIToolboxIOSTests.xctest;
-			remoteRef = EB98279A1E47FA38000FCDED /* PBXContainerItemProxy */;
+			remoteRef = EB9827E01E482A0F000FCDED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EB98279D1E47FA38000FCDED /* AIToolbox copy.framework */ = {
+		EB9827E31E482A0F000FCDED /* AIToolbox copy.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = "AIToolbox copy.framework";
-			remoteRef = EB98279C1E47FA38000FCDED /* PBXContainerItemProxy */;
+			remoteRef = EB9827E21E482A0F000FCDED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -505,6 +511,8 @@
 				EBE0E0401E41F6D100773AD3 /* DeviceCell.swift in Sources */,
 				EBE0E0601E4208BD00773AD3 /* Util.swift in Sources */,
 				EBE0E0471E41FFDF00773AD3 /* AccelerometerFilter.m in Sources */,
+				EB9827F11E48470A000FCDED /* EnumerationClass.swift in Sources */,
+				EB9828191E497050000FCDED /* FilterZoey.swift in Sources */,
 				EBE0E0481E41FFDF00773AD3 /* APLGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,10 +25,12 @@ extension Double {
     }
 }
 
+
 class UtilTest: XCTestCase {
 
     let util = Util()
-    
+    let filter = FilterZoey(frequency: 1,sampleRate: 50, passType: FilterZoey.PassType.Highpass,resonance: 1)
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -105,4 +107,56 @@ class UtilTest: XCTestCase {
     func testClassificationAIToolbox() {
         util.classificationAIToolbox()
     }
+    
+    func testRegressionAIToolbox() {
+        util.regressionAIToolbox()
+    }
+    
+    func testHighpassFilter() {
+//        var filter = FilterZoey(frequency: 1,sampleRate: 50, passType: FilterZoey.PassType.Highpass,resonance: 1)
+        var array = [-0.908, -0.911, -0.908,  -0.64, -0.917, -1.037, -0.913, -1.021, -0.908, -0.823, -0.91, -1.189, -0.908, -1.524, -0.909, -1.448, -0.91, -1.143, -0.917]
+        var filteredArr = Array(repeating: 0.0, count: array.count)
+        
+        for i in 0..<array.count {
+            filter.updateValue(newInput: array[i])
+            filteredArr[i] = filter.getValue()
+        }
+       print("The array afater filter is: \(filteredArr)");
+    }
+    
+    func testTranspose() {
+        let combineArray: [[Double]] = [
+            [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0],
+            [2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0],
+            [3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0],
+            [4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0]
+        ]
+        
+        print(util.transpose(input: combineArray))
+        
+    }
+    
+    func testextractFeatures() {
+        let combineArray: [[Double]] = [
+            [1.0, 2.0, 3.0],
+            [2.0, 3.0, 4.0],
+            [3.0, 4.0, 5.0],
+            [4.0, 5.0, 6.0],
+            [5.0, 6.0, 7.0]
+        ]
+        
+        print("This is the value of Extraction: \(util.extractFeatures(data : combineArray, frequency: 1.0, sampleRate: 50))")
+    }
+    
+//    func testFilterOut() {
+//        let axisVals = [[1.0, 2.0, 3.0],[2.0, 3.0, 4.0],[3.0, 4.0, 5.0],[4.0, 5.0, 6.0]]
+//        
+//        var expectedAxis = [[]]
+//        
+//        var filteredAxis = util.filterOut(data: axisVals, frequency: 1.0, sampleRate: 50)
+//        
+//        for i in 0..<expectedAxis.count {
+//            XCTAssertEqual(filteredAxis[i], expectedAxis[i], "This is the result of filterout")
+//        }
+//    }
 }

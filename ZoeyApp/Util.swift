@@ -54,7 +54,7 @@ class Util {
         }
         returnVal = returnVal/Double(nums.count)
 //        let returnVal = Surge.measq(nums)
-        print("RMS is: \(returnVal)")
+//        print("RMS is: \(returnVal)")
         return returnVal
     }
     
@@ -105,7 +105,7 @@ class Util {
             returnArray.append(rms_Axis.roundTo(places: 4))
     
             print("The column data is: \(col)")
-            print("The avg value is: \(rms_Axis)")
+            print("The RMS value is: \(rms_Axis)")
                 
             }
             
@@ -138,45 +138,85 @@ class Util {
     }
 
     
-//    func extractFeatures(data : [[Double]], frequency: Double) -> [Double] {
-//        // init the feature vector
-//        //        var featVec = initFeatVec(count: 66, val: 0.0) as! [Double]
-//        var featVec = [Double]()
-//        //        featVec[0...2] =
-//        
-//        //featVect[0...2]
-//        // get the average data for x, y, z of accel or gyro
-//        featVec.append(contentsOf: (avgAxisValue(data: data)))
-//        
-//        
-//        //doing gravity removal
-//        let newData = filterOut(data: data)
-//        
-//        //featVect[3...5]
-//        //do the rms for the value of each axis
-//        featVec.append(contentsOf: (rootMeanSquareAxisVals(data: newData)))
-//        
-//        ////featVect[6...14]
-//        ////Autocorrelation features for all three acceleration components (3 each): height of main peak; height and position of second peak
-//        //        featVec.append(contentsOf: (autocorrFeatures(data: newData, frequency: frequency)))
-//        
-//        ////featVect[15...50]
-//        ////Spectral peak features (12 each): height and position of first 6 peaks
-//        //        featVec.append(contentsOf: (spectralPeaksFeatures(data: newData, frequency: frequency)))
-//        
-//        ////featVect[51...65]
-//        ////Spectral power features (5 each): total power in 5 adjacent
-//        //        featVec.append(contentsOf: (spectralPowerFeatures(data: newData, frequency: frequency)))
-//        
-//        return featVec
-//    }
+    func extractFeatures(data : [[Double]], frequency: Double, sampleRate: Int) -> [Double] {
+        // init the feature vector
+        //        var featVec = initFeatVec(count: 66, val: 0.0) as! [Double]
+        var featVec = [Double]()
+        //        featVec[0...2] =
+        
+        //featVect[0...2]
+        // get the average data for x, y, z of accel or gyro
+        featVec.append(contentsOf: (avgAxisValue(data: data)))
+        
+        
+        //doing gravity removal
+        let newData = filterOut(data: data, frequency: frequency, sampleRate: sampleRate)
+        
+        //featVect[3...5]
+        //do the rms for the value of each axis
+        featVec.append(contentsOf: (rootMeanSquareAxisVals(data: newData)))
+        
+        ////featVect[6...14]
+        ////Autocorrelation features for all three acceleration components (3 each): height of main peak; height and position of second peak
+        //        featVec.append(contentsOf: (autocorrFeatures(data: newData, frequency: frequency)))
+        
+        ////featVect[15...50]
+        ////Spectral peak features (12 each): height and position of first 6 peaks
+        //        featVec.append(contentsOf: (spectralPeaksFeatures(data: newData, frequency: frequency)))
+        
+        ////featVect[51...65]
+        ////Spectral power features (5 each): total power in 5 adjacent
+        //        featVec.append(contentsOf: (spectralPowerFeatures(data: newData, frequency: frequency)))
+        
+        return featVec
+    }
     
-
-//
-//    func filterOut(data: [[Double]]) -> [[Double]] {
-//        var tempData = data
-//        return tempData
-//    }
+    func transpose<T>(input: [[T]]) -> [[T]] {
+        if input.isEmpty { return [[T]]() }
+        let count = input[0].count
+        var out = [[T]](repeating: [T](), count: count)
+        for outer in input {
+            for (index, inner) in outer.enumerated() {
+                out[index].append(inner)
+            }
+        }
+        
+        return out
+    }
+    
+    func filterOutSupport(filter: FilterZoey, data: [Double]) -> [Double] {
+        
+        var array = data
+        
+        var filteredArr = Array(repeating: 0.0, count: array.count)
+        
+        for i in 0..<array.count {
+            filter.updateValue(newInput: array[i])
+            filteredArr[i] = filter.getValue()
+        }
+        print("The array afater filter is: \(filteredArr)");
+        return filteredArr
+    }
+    
+    func filterOut(data: [[Double]], frequency: Double, sampleRate: Int) -> [[Double]] {
+        var tempData = data
+        var filterdData = [[Double]]()
+        
+        let filter = FilterZoey(frequency: frequency, sampleRate: sampleRate, passType: FilterZoey.PassType.Highpass, resonance: 1.0)
+       
+        for axis in 0...2 {
+            var col = [Double]()
+            
+            //get the column
+            col = data.getColumn(column: axis)
+            
+            filterdData.append(filterOutSupport(filter: filter, data: col))
+        }
+        
+        filterdData = transpose(input: filterdData)
+        
+        return filterdData
+    }
     
     //    func autocorrFeatures(data: [[Double]], frequency: Double) -> [Double] {
     //
@@ -208,129 +248,115 @@ class Util {
     //        <#function body#>
     //    }
     //
-    //    func testingRegressionAIToolbox() {
-    //
-    //        //training part
-    //        let trainData = DataSet(dataType: .regression, inputDimension: 1, outputDimension: 1)
-    //
-    //        do {
-    //            try trainData.addDataPoint(input: [1.0], output: [8.3])
-    //            try trainData.addDataPoint(input: [2.0], output: [11.0])
-    //            try trainData.addDataPoint(input: [3.0], output: [14.7])
-    //            try trainData.addDataPoint(input: [4.0], output: [19.7])
-    //            try trainData.addDataPoint(input: [5.0], output: [26.7])
-    //            try trainData.addDataPoint(input: [6.0], output: [35.2])
-    //            try trainData.addDataPoint(input: [7.0], output: [44.4])
-    //            try trainData.addDataPoint(input: [8.0], output: [55.9])
-    //        } catch {
-    //            print("error creating training data")
-    //        }
-    //
-    //        //model creation
-    //        let lr = LinearRegressionModel(inputSize: 1, outputSize: 1, polygonOrder: 1)
-    //
-    //        do{
-    //           try lr.trainRegressor(trainData)
-    //        } catch {
-    //            print("Linear Regression Training Error")
-    //        }
-    //
-    //        //testing part
-    //        let testData = DataSet(dataType: .regression, inputDimension: 1, outputDimension: 1)
-    //        do {
-    //            try testData.addTestDataPoint(input: [-5.0])
-    //            try testData.addTestDataPoint(input: [9.0])
-    //            try testData.addTestDataPoint(input: [17.0])
-    //            try testData.addTestDataPoint(input: [0.0])
-    //        }
-    //        catch {
-    //            print("Invalid test data set created")
-    //        }
-    //
-    ////        getting result
-    //
-    //        do {
-    //            try lr.predict(testData)
-    //        }
-    //        catch {
-    //            print("Error having linear regression calculate results")
-    //        }
-    //
-    //        //  Use the results
-    //        do {
-    ////            let result = try testData.getOutput(0)  //  Get first result
-    //            for index in 0...testData.size-1 {
-    //                let result = try testData.getOutput(index)[0].roundTo(places: 4)
-    //                print("The result is: \(result)")
-    //            }
-    //        }
-    //        catch {
-    //            print("Error getting results from data set")
-    //        }
-    //    }
-    //
-        func classificationAIToolbox() {
+        func regressionAIToolbox() {
     
-           let trainData = DataSet(dataType: .classification, inputDimension: 2, outputDimension: 1)
+            //training part
+            let trainData = DataSet(dataType: .regression, inputDimension: 1, outputDimension: 1)
+    
             do {
-                try trainData.addDataPoint(input: [0.2, 0.9], dataClass:0)
-                try trainData.addDataPoint(input: [0.8, 0.3], dataClass:0)
-                try trainData.addDataPoint(input: [0.5, 0.6], dataClass:0)
-                try trainData.addDataPoint(input: [0.2, 0.7], dataClass:1)
-                try trainData.addDataPoint(input: [0.2, 0.3], dataClass:1)
-                try trainData.addDataPoint(input: [0.4, 0.5], dataClass:1)
-                try trainData.addDataPoint(input: [0.5, 0.4], dataClass:2)
-                try trainData.addDataPoint(input: [0.3, 0.2], dataClass:2)
-                try trainData.addDataPoint(input: [0.7, 0.2], dataClass:2)
-            }
-            catch {
+                try trainData.addDataPoint(input: [1.0], output: [8.3])
+                try trainData.addDataPoint(input: [2.0], output: [11.0])
+                try trainData.addDataPoint(input: [3.0], output: [14.7])
+                try trainData.addDataPoint(input: [4.0], output: [19.7])
+                try trainData.addDataPoint(input: [5.0], output: [26.7])
+                try trainData.addDataPoint(input: [6.0], output: [35.2])
+                try trainData.addDataPoint(input: [7.0], output: [44.4])
+                try trainData.addDataPoint(input: [8.0], output: [55.9])
+            } catch {
                 print("error creating training data")
             }
-            //  Create a model
-            let svm = SVMModel(problemType: .c_SVM_Classification, kernelSettings: KernelParameters(type: .linear, degree: 0, gamma: 0.5, coef0: 0.0))
     
-            //  Train the model
-            do {
-    //            try svm.train(trainData)
-                try svm.trainClassifier(trainData)
-            }
-            catch let error as Error {
-                print("SVM Training error is: \(error)")
+            //model creation
+            let lr = LinearRegressionModel(inputSize: 1, outputSize: 1, polygonOrder: 1)
+    
+            do{
+               try lr.trainRegressor(trainData)
+            } catch {
+                print("Linear Regression Training Error")
             }
     
-            //  Create a data set with the sequence
-            let testData = DataSet(dataType: .classification, inputDimension: 2, outputDimension: 1)
+            //testing part
+            let testData = DataSet(dataType: .regression, inputDimension: 1, outputDimension: 1)
             do {
-                try testData.addTestDataPoint(input: [0.7, 0.6])
-                try testData.addTestDataPoint(input: [0.5, 0.7])
-                try testData.addTestDataPoint(input: [0.1, 0.6])
-                try testData.addTestDataPoint(input: [0.1, 0.4])
-                try testData.addTestDataPoint(input: [0.3, 0.1])
-                try testData.addTestDataPoint(input: [0.7, 0.1])
+                try testData.addTestDataPoint(input: [-5.0])
+                try testData.addTestDataPoint(input: [9.0])
+                try testData.addTestDataPoint(input: [17.0])
+                try testData.addTestDataPoint(input: [0.0])
             }
             catch {
                 print("Invalid test data set created")
             }
     
+    //        getting result
+    
             do {
-                try svm.classify(<#T##testData: MLClassificationDataSet##MLClassificationDataSet#>)
-//                try svm.classify(testData)
-    //            try svm.predictValues(trainData)
+                try lr.predict(testData)
             }
-            catch let error as Error {
-                print("Error having SVM calculate results, with Error is: \(error)")
+            catch {
+                print("Error having linear regression calculate results")
             }
-            
+    
             //  Use the results
             do {
+    //            let result = try testData.getOutput(0)  //  Get first result
                 for index in 0...testData.size-1 {
-                    let result = try testData.getClass(index)
-                    let input = try testData.getInput(index)
-                    print("The value is: \(input) and result is: \(result)")
+                    let result = try testData.getOutput(index)[0].roundTo(places: 4)
+                    print("The result is: \(result)")
                 }
-            } catch {
+            }
+            catch {
                 print("Error getting results from data set")
             }
-    }
+        }
+    //
+        func classificationAIToolbox() {
     
+            let data = DataSet(dataType: .realAndClass, inputDimension: 2, outputDimension: 1)
+            do {
+                print("Value of the \(EnumerationClass.Excercise.Heelslide) is \(EnumerationClass.Excercise.Heelslide.rawValue)")
+                try data.addDataPoint(input: [0.0, 1.0], dataClass:1)
+                try data.addDataPoint(input: [0.0, 0.9], dataClass:1)
+                try data.addDataPoint(input: [0.1, 1.0], dataClass:1)
+                try data.addDataPoint(input: [1.0, 0.0], dataClass:0)
+                try data.addDataPoint(input: [1.0, 0.1], dataClass:0)
+                try data.addDataPoint(input: [0.9, 0.0], dataClass:0)
+            }
+            catch {
+                print("Invalid data set created")
+            }
+            
+            //  Create an SVM classifier and train
+            let svm = SVMModel(problemType: .c_SVM_Classification, kernelSettings:
+                KernelParameters(type: .radialBasisFunction, degree: 0, gamma: 0.5, coef0: 0.0))
+            svm.train(data)
+            
+            //  Create a test dataset
+            let testData = DataSet(dataType: .realAndClass, inputDimension: 2, outputDimension: 1)
+            do {
+                try testData.addTestDataPoint(input: [0.0, 0.1])    //  Expect 1
+                try testData.addTestDataPoint(input: [0.1, 0.0])    //  Expect 0
+                try testData.addTestDataPoint(input: [1.0, 0.9])    //  Expect 0
+                try testData.addTestDataPoint(input: [0.9, 1.0])    //  Expect 1
+                try testData.addTestDataPoint(input: [0.5, 0.4])    //  Expect 0
+                try testData.addTestDataPoint(input: [0.5, 0.6])    //  Expect 1
+            }
+            catch {
+                print("Invalid data set created")
+            }
+            
+            //  Predict on the test data
+            svm.predictValues(testData)
+            
+            //  See if we matched
+            var classLabel : Int
+            do {
+                for index in 0..<testData.size {
+                    try classLabel = testData.getClass(index)
+                    try print("Input: \(testData.getInput(index)) has output: \(classLabel)")
+                }
+            }
+            catch {
+                print("Error in prediction")
+            }
+    }
 }
