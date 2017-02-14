@@ -207,7 +207,7 @@ class DetailVC: UIViewController {
     
     @IBAction func ledToRed(_sender: AnyObject){
         print("Change LED to RED")
-        print(device.deviceInfo)
+        print(device.deviceInfo as Any)
         device.led?.flashColorAsync(UIColor.red, withIntensity: 0.5)
         
         //        util.testms()
@@ -216,7 +216,7 @@ class DetailVC: UIViewController {
     
     @IBAction func ledToGreen(_sender: AnyObject){
         print("Change LED to GREEN")
-        print(device.deviceInfo)
+        print(device.deviceInfo as Any)
         device.led?.flashColorAsync(UIColor.green, withIntensity: 0.5)
         
         //        util.testingClassificationAIToolbox()
@@ -224,7 +224,7 @@ class DetailVC: UIViewController {
     
     @IBAction func ledToBlue(_sender: AnyObject){
         print("Change LED to BLUE")
-        print(device.deviceInfo)
+        print(device.deviceInfo as Any)
         device.led?.flashColorAsync(UIColor.blue, withIntensity: 0.5)
     }
     

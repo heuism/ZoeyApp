@@ -57,7 +57,7 @@ class DevicesVC: UITableViewController, CBCentralManagerDelegate, UIAlertViewDel
             print("The app is not authorized to use Bluetooth low energy.")
         case CBManagerState.poweredOff:
             print("Bluetooth is currently powered off.")
-            var alertView = UIAlertView(title: "Error", message: "Please turn on Bluetooth in Settings", delegate: self, cancelButtonTitle: "OK", otherButtonTitles: "Setting")
+            let alertView = UIAlertView(title: "Error", message: "Please turn on Bluetooth in Settings", delegate: self, cancelButtonTitle: "OK", otherButtonTitles: "Setting")
             //            var alertView = UIAlertController(title: "Error", message: "Please turn on Bluetooth in Settings", preferredStyle: UIAlertControllerStyle.actionSheet)
             tableView.reloadData()
             alertView.show()

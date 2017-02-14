@@ -199,7 +199,7 @@ class Util {
     }
     
     func filterOut(data: [[Double]], frequency: Double, sampleRate: Int) -> [[Double]] {
-        var tempData = data
+        let tempData = data
         var filterdData = [[Double]]()
         
         let filter = FilterZoey(frequency: frequency, sampleRate: sampleRate, passType: FilterZoey.PassType.Highpass, resonance: 1.0)
@@ -208,7 +208,7 @@ class Util {
             var col = [Double]()
             
             //get the column
-            col = data.getColumn(column: axis)
+            col = tempData.getColumn(column: axis)
             
             filterdData.append(filterOutSupport(filter: filter, data: col))
         }
@@ -334,11 +334,7 @@ class Util {
             let testData = DataSet(dataType: .realAndClass, inputDimension: 2, outputDimension: 1)
             do {
                 try testData.addTestDataPoint(input: [0.0, 0.1])    //  Expect 1
-                try testData.addTestDataPoint(input: [0.1, 0.0])    //  Expect 0
-                try testData.addTestDataPoint(input: [1.0, 0.9])    //  Expect 0
-                try testData.addTestDataPoint(input: [0.9, 1.0])    //  Expect 1
-                try testData.addTestDataPoint(input: [0.5, 0.4])    //  Expect 0
-                try testData.addTestDataPoint(input: [0.5, 0.6])    //  Expect 1
+
             }
             catch {
                 print("Invalid data set created")
@@ -358,5 +354,174 @@ class Util {
             catch {
                 print("Error in prediction")
             }
+    }
+    
+    func gettingClasses(labels: [Int]) -> Int {
+        var labelsTemp = [Int]()
+        
+        for label in labels {
+            if !labelsTemp.contains(label) {
+                labelsTemp.append(label)
+            }
+        }
+        var sum = 0
+        
+        for number in 1..<labelsTemp.count {
+            sum += number
+        }
+        return sum
+    }
+    
+    func initModel(model: EnumerationClass.MachineLearningAlgorithm) -> AnyObject? {
+        var machine: AnyObject!
+        switch model {
+        case .SVM:
+            machine = SVMModel(problemType: .c_SVM_Classification, kernelSettings: KernelParameters(type: .radialBasisFunction, degree: 0, gamma: 0.5, coef0: 0.0))
+        default:
+            return nil
+        }
+        return machine
+    }
+    
+    func learningValues(trainingData: [[Double]], trainingLabels: [Int]?, trainingOutput: [[Double]]?, model: EnumerationClass.MachineLearningAlgorithm) -> AnyObject? {
+        if let machine = initModel(model: model){
+            let svm = machine as! SVMModel
+            let data = DataSet(dataType: .realAndClass, inputDimension: trainingData[0].count, outputDimension: 1)
+            do {
+                for row in 0..<trainingData.count {
+                    try data.addDataPoint(input: trainingData[row], dataClass: trainingLabels![row])
+                }
+            } catch {
+                print("Invalid data set created")
+                }
+        
+            svm.train(data)
+        
+            return svm
+        }
+        return nil
+    }
+    
+    func predictingValues(testingData: [[Double]], model: SVMModel, numOfClasses: Int) -> [String]? {
+        let testData = DataSet(dataType: .realAndClass, inputDimension: testingData[0].count, outputDimension: numOfClasses)
+        do {
+            try testData.addTestDataPoint(input: testingData[0])    //  Expect 1
+            try print(testData.getInput(0))
+        }
+        catch {
+            print("Invalid data set created")
+        }
+        
+        //  Predict on the test data
+        model.predictValues(testData)
+        
+        //  See if we matched
+        var predicted = [String]()
+        var classLabel : Int
+        do {
+            for index in 0..<testData.size {
+                try classLabel = testData.getClass(index)
+                try print("Input: \(testData.getInput(index)) has output: \(classLabel)")
+                switch classLabel {
+                case EnumerationClass.Excercise.Heelslide.rawValue:
+                    predicted.append("Heelslide")
+                case EnumerationClass.Excercise.HipAb.rawValue:
+                    predicted.append("HipAb")
+                case EnumerationClass.Excercise.HipEx.rawValue:
+                    predicted.append("HipEx")
+                case EnumerationClass.Excercise.HipFlex.rawValue:
+                    predicted.append("HipFlex")
+                case EnumerationClass.Excercise.Inner.rawValue:
+                    predicted.append("Inner")
+                case EnumerationClass.Excercise.Knee.rawValue:
+                    predicted.append("Knee")
+                case EnumerationClass.Excercise.LegLift.rawValue:
+                    predicted.append("LegLift")
+                default:
+                    break
+                }
+            }
+        }
+        catch {
+            print("Error in prediction")
+            return nil
+        }
+        
+        return predicted
+    }
+    
+    func applyMachineLearning(trainingData: [[Double]], trainingLabels: [Int]?, trainingOutput: [[Double]]?, testingData: [[Double]], algo: EnumerationClass.MachineLearningAlgorithm) -> [String]? {
+        
+        
+//        var svm: SVMModel!
+//        //  Create an SVM classifier and train
+//        //        let svm = SVMModel(problemType: .c_SVM_Classification, kernelSettings: KernelParameters(type: .radialBasisFunction, degree: 0, gamma: 0.5, coef0: 0.0))
+//        
+//        svm = initModel(model: EnumerationClass.MachineLearningAlgorithm.SVM) as! SVMModel
+        
+        if let model = learningValues(trainingData: trainingData, trainingLabels: trainingLabels, trainingOutput: trainingOutput, model: .SVM){
+            
+            let svm = model as! SVMModel
+            
+            let numOfClasses = gettingClasses(labels: trainingLabels!)
+            
+            let predictedLabels = predictingValues(testingData: testingData, model: svm, numOfClasses: numOfClasses)
+            
+            return predictedLabels
+        }
+        
+        return nil
+        
+//        let numOfClasses = gettingClasses(labels: trainingLabels!)
+//        
+//        let predictedLabels = predictingValues(testingData: testingData, model: svm, numOfClasses: numOfClasses)
+//        
+//        return predictedLabels
+        //  Create a test dataset
+//        let testData = DataSet(dataType: .realAndClass, inputDimension: testingData[0].count, outputDimension: numOfClasses)
+//        do {
+//            try testData.addTestDataPoint(input: testingData[0])    //  Expect 1
+//            try print(testData.getInput(0))
+//        }
+//        catch {
+//            print("Invalid data set created")
+//        }
+//        
+//        //  Predict on the test data
+//        svm.predictValues(testData)
+//        
+//        //  See if we matched
+//        var predicted = [String]()
+//        var classLabel : Int
+//        do {
+//            for index in 0..<testData.size {
+//                try classLabel = testData.getClass(index)
+//                try print("Input: \(testData.getInput(index)) has output: \(classLabel)")
+//                switch classLabel {
+//                case EnumerationClass.Excercise.Heelslide.rawValue:
+//                    predicted.append("Heelslide")
+//                case EnumerationClass.Excercise.HipAb.rawValue:
+//                    predicted.append("HipAb")
+//                case EnumerationClass.Excercise.HipEx.rawValue:
+//                    predicted.append("HipEx")
+//                case EnumerationClass.Excercise.HipFlex.rawValue:
+//                    predicted.append("HipFlex")
+//                case EnumerationClass.Excercise.Inner.rawValue:
+//                    predicted.append("Inner")
+//                case EnumerationClass.Excercise.Knee.rawValue:
+//                    predicted.append("Knee")
+//                case EnumerationClass.Excercise.LegLift.rawValue:
+//                    predicted.append("LegLift")
+//                default:
+//                    break
+//                }
+//            }
+//        }
+//        catch {
+//            print("Error in prediction")
+//            return nil
+//        }
+//
+//    return predicted
     }
 }

@@ -20,4 +20,10 @@ class EnumerationClass {
         case LegLift = 6
     }
     
+    enum MachineLearningAlgorithm: String {
+        case SVM = "Support Vector Machine"
+        case NN = "Neuron Network"
+        case LR = "Logistic Regression"
+    }
+    
 }
